@@ -26,7 +26,7 @@
  * @param {string} line
  * @returns {string}
  */
-function frontDoorResponse(line) {
+ export function frontDoorResponse(line) {
   return line[0];
 }
 
@@ -37,7 +37,7 @@ function frontDoorResponse(line) {
  * @param {string} word the letters you responded with before
  * @returns {string} the front door password
  */
-function frontDoorPassword(word) {
+export function frontDoorPassword(word) {
   return word[0].toUpperCase() + word.slice(1,).toLowerCase();
 }
 
@@ -48,7 +48,7 @@ function frontDoorPassword(word) {
  * @param {string} line
  * @returns {string}
  */
-function backDoorResponse(line) {
+export function backDoorResponse(line) {
   return line.trim().slice(-1)
 }
 
@@ -59,11 +59,6 @@ function backDoorResponse(line) {
  * @param {string} word the letters you responded with before
  * @returns {string} the back door password
  */
-function backDoorPassword(word) {
+export function backDoorPassword(word) {
   return word[0].toUpperCase() + word.slice(1,).toLowerCase() + ", please";
 }
-
-console.log(frontDoorResponse('AronMav'))
-console.log(frontDoorPassword('AronMav'))
-console.log(backDoorResponse('AronMav'))
-console.log(backDoorPassword('AronMav'))
