@@ -34,7 +34,7 @@
  * The number of minutes it takes to prepare a single layer.
  */
  const PREPARATION_MINUTES_PER_LAYER = 2;
- const EXPECTED_MINUTES_IN_OVEN = 40;
+ export const EXPECTED_MINUTES_IN_OVEN = 40;
  
  
  /**
@@ -44,7 +44,7 @@
   * @param {number} actualMinutesInOven
   * @returns {number} the number of minutes remaining
   */
-function remainingMinutesInOven(actualMinutesInOven) {
+ export function remainingMinutesInOven(actualMinutesInOven) {
    return EXPECTED_MINUTES_IN_OVEN - actualMinutesInOven;
  }
  
@@ -54,7 +54,7 @@ function remainingMinutesInOven(actualMinutesInOven) {
   * @param {number} numberOfLayers
   * @returns {number} the total preparation time
   */
-function preparationTimeInMinutes(numberOfLayers) {
+ export function preparationTimeInMinutes(numberOfLayers) {
    return numberOfLayers * PREPARATION_MINUTES_PER_LAYER;
  }
  
@@ -66,10 +66,6 @@ function preparationTimeInMinutes(numberOfLayers) {
   * @param {number} actualMinutesInOven
   * @returns {number} the total working time
   */
-function totalTimeInMinutes(numberOfLayers, actualMinutesInOven) {
+ export function totalTimeInMinutes(numberOfLayers, actualMinutesInOven) {
    return preparationTimeInMinutes(numberOfLayers) + actualMinutesInOven;
- }
- 
- console.log(remainingMinutesInOven(2))
- console.log(preparationTimeInMinutes(2))
- console.log(totalTimeInMinutes(2,4))
+ } 
