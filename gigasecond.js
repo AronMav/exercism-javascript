@@ -4,5 +4,5 @@
 //
 
 export const gigasecond = (date) => {
-  return new Date((Math.floor(date)/1000 + 1000000000)*1000)
+  return new Date(Number(date) + 10e11)
 }
