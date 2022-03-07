@@ -26,7 +26,7 @@
  *
  * @return {boolean} Whether or not you can execute a fast attack.
  */
- export function canExecuteFastAttack(knightIsAwake) {
+export function canExecuteFastAttack(knightIsAwake) {
   return !knightIsAwake
 }
 
@@ -71,6 +71,6 @@ export function canFreePrisoner(
   prisonerIsAwake,
   petDogIsPresent
 ) {
-  return ( (prisonerIsAwake && !knightIsAwake && !archerIsAwake) 
-        || (!archerIsAwake && petDogIsPresent))
+  return ((prisonerIsAwake && !knightIsAwake && !archerIsAwake)
+    || (!archerIsAwake && petDogIsPresent))
 }

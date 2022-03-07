@@ -1,6 +1,6 @@
 // @ts-check
 
-export class ArgumentError extends Error {}
+export class ArgumentError extends Error { }
 
 export class OverheatingError extends Error {
   constructor(temperature) {
@@ -16,7 +16,7 @@ export class OverheatingError extends Error {
  * @throws {Error}
  */
 export function checkHumidityLevel(humidityPercentage) {
-  if (humidityPercentage > 70){
+  if (humidityPercentage > 70) {
     throw new Error('Throws an error')
   } else {
     return undefined
@@ -31,7 +31,7 @@ export function checkHumidityLevel(humidityPercentage) {
  */
 export function reportOverheating(temperature) {
   const error = new Error()
-  if (temperature > 500){
+  if (temperature > 500) {
     throw new OverheatingError(temperature)
   } else if (temperature === null) {
     throw new ArgumentError()
@@ -50,7 +50,7 @@ export function reportOverheating(temperature) {
  * @throws {ArgumentError|OverheatingError|Error}
  */
 
-export class UnknownError extends Error {}
+export class UnknownError extends Error { }
 
 export function monitorTheMachine(actions) {
   try {
@@ -63,9 +63,9 @@ export function monitorTheMachine(actions) {
         actions.shutdown()
       } else {
         actions.alertOverheating()
-      } 
+      }
     } else {
       throw error;
     }
-  }  
+  }
 }

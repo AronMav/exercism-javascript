@@ -4,11 +4,11 @@
 //
 
 export const isPangram = (string) => {
-    for (let letter of ALPHABET) {
-        if (!string.includes(letter) 
-            && !string.includes(letter.toUpperCase())) return false
-    }
-    return true
+  for (let letter of ALPHABET) {
+    if (!string.includes(letter)
+      && !string.includes(letter.toUpperCase())) return false
+  }
+  return true
 };
-  
+
 const ALPHABET = 'abcdefghijklmnopqrstuvwxyz'

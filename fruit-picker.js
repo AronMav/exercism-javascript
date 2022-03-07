@@ -28,7 +28,7 @@ export function isServiceOnline() {
  * @return {AvailabilityAction} the result from checkInventory
  */
 export function pickFruit(variety, quantity, callback) {
-   return checkInventory({quantity, variety}, callback);
+  return checkInventory({ quantity, variety }, callback);
 }
 
 /**
@@ -39,10 +39,10 @@ export function pickFruit(variety, quantity, callback) {
  * @return {AvailabilityAction} whether the fruit was purchased 'PURCHASE' or 'NOOP'
  */
 export function purchaseInventoryIfAvailable(err, isAvailable) {
-  if (err){
+  if (err) {
     throw new Error(err);
   }
-  return isAvailable ? 'PURCHASE':'NOOP'
+  return isAvailable ? 'PURCHASE' : 'NOOP'
 }
 
 /**

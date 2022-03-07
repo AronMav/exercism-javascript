@@ -4,5 +4,5 @@
 // convenience to get you started writing code faster.
 //
 export const twoFer = (name) => {
-    return `One for ${name == undefined?'you':name}, one for me.`
-  };
+  return `One for ${name == undefined ? 'you' : name}, one for me.`
+};

@@ -4,13 +4,12 @@
 //
 
 export const toRna = (rna) => {
-    let str = ''
-    for (let i of rna) {
-      if (i == 'G') {str += 'C'} else
-      if (i == 'C') {str += 'G'} else
-      if (i == 'T') {str += 'A'} else
-      if (i == 'A') {str += 'U'}
-    }
-    return str
-  };
-  
+  let str = ''
+  for (let i of rna) {
+    if (i == 'G') { str += 'C' } else
+      if (i == 'C') { str += 'G' } else
+        if (i == 'T') { str += 'A' } else
+          if (i == 'A') { str += 'U' }
+  }
+  return str
+};

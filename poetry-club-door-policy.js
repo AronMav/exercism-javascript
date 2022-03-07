@@ -26,7 +26,7 @@
  * @param {string} line
  * @returns {string}
  */
- export function frontDoorResponse(line) {
+export function frontDoorResponse(line) {
   return line[0];
 }
 

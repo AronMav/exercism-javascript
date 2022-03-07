@@ -4,17 +4,17 @@
 //
 
 export const decodedValue = (colors) => colors.map(
-    i => COLORS.indexOf(i)).slice(0,2).join('') | 0;
+  i => COLORS.indexOf(i)).slice(0, 2).join('') | 0;
 
 
 const COLORS = [
-    'black',
-    'brown',
-    'red',
-    'orange',
-    'yellow',
-    'green',
-    'blue',
-    'violet',
-    'grey',
-    'white',];
+  'black',
+  'brown',
+  'red',
+  'orange',
+  'yellow',
+  'green',
+  'blue',
+  'violet',
+  'grey',
+  'white',];

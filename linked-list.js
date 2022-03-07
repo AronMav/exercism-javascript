@@ -19,17 +19,17 @@ export class LinkedList {
     this.tail = null;
     this.length = 0;
   }
-  
+
   push(value) {
     let newNode = new Node(value);
-    if (this.head == null){
+    if (this.head == null) {
       this.head = newNode;
       this.tail = newNode;
     } else {
       let newNode = new Node(value);
       this.tail.next = newNode;
       newNode.previous = this.tail;
-     this.tail = newNode;
+      this.tail = newNode;
     }
     this.length++
   }
@@ -37,7 +37,7 @@ export class LinkedList {
   pop() {
     let value = this.tail.value;
     if (this.tail.previous != null) {
-      this.tail.previous.next = null;  
+      this.tail.previous.next = null;
       this.tail = this.tail.previous
     }
     this.length--
@@ -46,18 +46,18 @@ export class LinkedList {
 
   shift() {
     let value = this.head.value;
-    if (this.head.next != null){
+    if (this.head.next != null) {
       let nextNode = this.head.next;
       this.head = nextNode;
       this.length--;
     } else {
       this.head = null;
       this.tail = null;
-      this.length = 0;   
+      this.length = 0;
     }
-    return value; 
+    return value;
   }
-  
+
   unshift(value) {
     let newNode = new Node(value);
     newNode.next = this.head;
@@ -68,26 +68,26 @@ export class LinkedList {
   delete(value) {
     let node = this.findNode(this.head, value);
     if (node == undefined) return
-    if (node.previous != null){
+    if (node.previous != null) {
       node.previous.next = node.next;
-    } 
-    if (node.next != null){
+    }
+    if (node.next != null) {
       node.next.previous = node.previous;
     } else this.tail = node.previous;
     this.length--;
   }
 
-  findNode(node, value){
+  findNode(node, value) {
     if (node.value == value) {
       return node;
-    } else 
-    if (node.next != null){
-      return this.findNode(node.next, value);
-    } else {
-      return undefined;
-    }
+    } else
+      if (node.next != null) {
+        return this.findNode(node.next, value);
+      } else {
+        return undefined;
+      }
   }
-  
+
   count() {
     return this.length;
   }
