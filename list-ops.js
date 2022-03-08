@@ -92,17 +92,8 @@ class Cons {
   }
 }
 
-class List {
+export class List {
   constructor(values = []) {
     return Cons.fromArray(values)
   }
 }
-
-
-const list1 = new List([1, 2]);
-const list2 = new List([1, 2, 3, 4]);
-
-console.log(list1.values)
-list1.append(list2)
-
-console.log(list1.values)
